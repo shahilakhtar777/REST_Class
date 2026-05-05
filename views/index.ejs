@@ -8,11 +8,18 @@
 </head>
 <body>
     <h1>Quora Posts</h1>
-    <% for(posts of posts){%>
+    <% for(post of posts){%>
         <div class="post">
-            <h3 class="user">@<%= posts.username %></h3>
-            <h4 class="content"> <%= posts.content%></h4>
+            <h3 class="user">@<%= post.username %></h3>
+            <h4 class="content"> <%= post.content%></h4>
+            <br>
+            <a href="http://localhost:8080/posts/<%=post.id%>">See in Details</a>
         </div>
    <% }%>
+   <br>
+   <br>
+
+   <a href="http://localhost:8080/posts/new">Create a new post
+   </a>
 </body>
 </html>
